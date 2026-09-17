@@ -423,6 +423,11 @@ a {
   font-size: 0.95rem;
 }
 
+.member-duty {
+  color: var(--sand);
+  font-size: 0.9rem;
+}
+
 .member-contacts {
   display: flex;
   flex-wrap: wrap;
