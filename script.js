@@ -34,3 +34,25 @@ if ("IntersectionObserver" in window && members.length) {
 } else {
   members.forEach((item) => item.classList.add("is-visible"));
 }
+
+document.addEventListener("click", (event) => {
+  const trigger = event.target.closest("[data-cv]");
+  if (!trigger) return;
+  const dialog = document.getElementById(`cv-${trigger.dataset.cv}`);
+  if (dialog && typeof dialog.showModal === "function" && !dialog.open) {
+    dialog.showModal();
+  }
+});
+
+document.querySelectorAll(".cv-dialog").forEach((dialog) => {
+  const closeBtn = dialog.querySelector(".cv-close");
+  if (closeBtn) {
+    closeBtn.addEventListener("click", () => dialog.close());
+  }
+
+  dialog.addEventListener("click", (event) => {
+    if (event.target === dialog) {
+      dialog.close();
+    }
+  });
+});
