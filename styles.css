@@ -82,10 +82,9 @@ a {
 }
 
 .logo img {
-  width: 2.35rem;
-  height: 2.35rem;
-  object-fit: cover;
-  border-radius: 50%;
+  width: 2.85rem;
+  height: 2.2rem;
+  object-fit: contain;
 }
 
 .nav {
@@ -199,7 +198,6 @@ a {
 .brand-logo-shine {
   position: absolute;
   inset: 0;
-  border-radius: 50%;
   overflow: hidden;
   pointer-events: none;
   mix-blend-mode: soft-light;
@@ -227,9 +225,8 @@ a {
 .brand-logo {
   position: relative;
   z-index: 1;
-  width: min(72vw, 22rem);
+  width: min(78vw, 24rem);
   height: auto;
-  border-radius: 50%;
   filter: drop-shadow(0 18px 40px rgba(0, 0, 0, 0.55));
   animation: logo-pulse 3.8s ease-in-out infinite alternate;
 }
